@@ -1,0 +1,236 @@
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Instrutores - StrongFit</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="index.html">
+                Academia StrongFit
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMain"
+                aria-controls="navbarMain"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMain">
+
+                <ul class="navbar-nav me-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            Dashboard
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle"
+                            href="#"
+                            id="alunosDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Alunos
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item"
+                                    href="alunos-cadastro.html">
+                                    Cadastro de Alunos
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item"
+                                    href="alunos-lista.html">
+                                    Listagem de Alunos
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active"
+                            href="#"
+                            id="instrutoresDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Instrutores
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item active"
+                                    href="instrutores-cadastro.html">
+                                    Cadastro de Instrutores
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item"
+                                    href="instrutores-lista.html">
+                                    Listagem de Instrutores
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- CONTEÚDO -->
+    <main class="container" style="padding-top: 100px; padding-bottom: 50px;">
+
+        <div class="text-center mb-4">
+            <h1 class="fw-bold">Cadastro de Instrutores</h1>
+            <p class="text-muted">
+                Cadastre os profissionais responsáveis pelos treinamentos da academia.
+            </p>
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="card shadow border-0">
+
+                    <div class="card-body p-4">
+
+                        <form>
+
+                            <div class="mb-3">
+                                <label for="nomeInstrutor" class="form-label">
+                                    Nome do Instrutor
+                                </label>
+
+                                <input type="text"
+                                    class="form-control"
+                                    id="nomeInstrutor"
+                                    placeholder="Digite o nome completo">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="especialidadeInstrutor" class="form-label">
+                                    Especialidade
+                                </label>
+
+                                <input type="text"
+                                    class="form-control"
+                                    id="especialidadeInstrutor"
+                                    placeholder="Musculação, Funcional, Crossfit, Personal Trainer...">
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="emailInstrutor" class="form-label">
+                                        E-mail
+                                    </label>
+
+                                    <input type="email"
+                                        class="form-control"
+                                        id="emailInstrutor"
+                                        placeholder="instrutor@strongfit.com">
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <label for="telefoneInstrutor" class="form-label">
+                                        Telefone
+                                    </label>
+
+                                    <input type="tel"
+                                        class="form-control"
+                                        id="telefoneInstrutor"
+                                        placeholder="(00) 00000-0000">
+                                </div>
+
+                            </div>
+
+                            <div class="mb-4">
+                                <label for="turnoInstrutor" class="form-label">
+                                    Turno de Trabalho
+                                </label>
+
+                                <select class="form-select" id="turnoInstrutor">
+                                    <option selected disabled>
+                                        Selecione o turno
+                                    </option>
+
+                                    <option>Manhã</option>
+                                    <option>Tarde</option>
+                                    <option>Noite</option>
+                                    <option>Integral</option>
+                                </select>
+                            </div>
+
+                            <div class="d-flex gap-2">
+
+                                <button type="submit"
+                                    class="btn btn-success">
+                                    Salvar Instrutor
+                                </button>
+
+                                <a href="instrutores-lista.html"
+                                    class="btn btn-outline-secondary">
+                                    Ver Lista
+                                </a>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-center text-light py-3">
+        <small>
+            StrongFit Academia &copy; 2026 - Sistema de Gestão de Academia
+        </small>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS Personalizado -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
+```
